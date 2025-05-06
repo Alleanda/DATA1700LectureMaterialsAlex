@@ -3,40 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Spell generator</title>
-    <script>
-        function CastRandomSpell(){
-
-            const adjectives = [
-                "Mystic","Enchanted","Arcane","Divine","Shadow",
-                "Infernal","Celestial","Ethereal","Luminous","Runic"
-            ]
-
-            const nouns = [
-                "Flame","Frost","Storm","Whisper","Blade",
-                "Phoenix","Dragon","Orb","Crown","Warden"
-            ];
-
-            const magicalTerms = [
-                "of Power","of Eternity","of the Ancients",
-                "of Shadows","of Light","of the Void",
-                "of Time","of the Elements","of Chaos","of Harmony"
-            ];
-
-            function generateSpellName() {
-                const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-                const noun = nouns[Math.floor(Math.random() * nouns.length)];
-                const magicalTerm = magicalTerms[Math.floor(Math.random() * magicalTerms.length)];
-
-                return `${adjective} ${noun} ${magicalTerm}`;
-            }
-
-            alert("The wizard is casting  " + generateSpellName());
-        }
-    </script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-<button onclick="CastRandomSpell()">Cast Spell</button>
-
+<button id="button">Cast Spell</button>
+<div id="output"></div>
 </body>
 </html>
